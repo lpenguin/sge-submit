@@ -13,5 +13,6 @@ setup(name='sgeparallel',
       requires=[
           'drmaa',
           'tailer',
+          'shutilwhich'
       ]
 )

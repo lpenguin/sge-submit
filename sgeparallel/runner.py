@@ -1,10 +1,9 @@
-import shutil
+import shutilwhich as shutil
 from typing import List
 import drmaa
 import logging
 import time
 
-from sgeparallel.template import parse_arg
 
 logger = logging.getLogger(__name__)
 
@@ -20,17 +19,20 @@ class JobTemplateParams:
 
 
 class Runner:
-    def __init__(self, session: drmaa.Session):
+    def __init__(self, session):
+        # type: (drmaa.Session)->None
         self._session = session
 
-    def submit_jobs(self, job_templates: List[drmaa.JobTemplate])->List:
+    def submit_jobs(self, job_templates):
+        # type: (List[drmaa.JobTemplate])->list
         job_ids = [
             self._session.runJob(jt)
             for jt in job_templates
         ]
         return job_ids
 
-    def iter_results(self, job_ids: List):
+    def iter_results(self, job_ids):
+        # type: (list)->None
         queued_ids = set(job_ids)
 
         run_count = None

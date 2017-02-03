@@ -16,6 +16,7 @@ def params_substitute(params_template, replacement):
         for name, value in params_template.items()
     }
 
+
 def command_substitute(command_template, replacement):
     """
     :type command_template: list[str]

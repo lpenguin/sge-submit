@@ -1,3 +1,6 @@
+from __future__ import absolute_import, print_function
+
+
 import argparse
 import os
 import shutil
@@ -152,7 +155,3 @@ def tailfile(tmpl_file):
     with open(tmpl_file) as f:
         for l in follow(f):
             print(l)
-
-
-if __name__ == '__main__':
-    main()

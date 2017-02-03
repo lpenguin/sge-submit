@@ -1,3 +1,4 @@
+# coding=utf-8
 import sys
 import select
 
@@ -37,7 +38,7 @@ def progress_bar (iteration, total, running, prefix ='', suffix ='', decimals = 
 
     rest_length = unfilled_length - running_length
 
-    bar = '█' * filledLength + '+' * running_length + '-' * rest_length
+    bar = u'█' * filledLength + '+' * running_length + '-' * rest_length
     sys.stdout.write('\r%s |%s| %s%s %s' % (prefix, bar, percent, '%', suffix)),
     if iteration == total:
         sys.stdout.write('\n')
