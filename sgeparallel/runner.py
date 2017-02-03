@@ -77,8 +77,8 @@ class Runner:
 
         if params['stdout']:
             jt.outputPath = params['stdout']
-        # if params['stderr']:
-        jt.errorPath = ':/home/nprian/foo.err' #params['stderr']
+        if params['stderr']:
+            jt.errorPath = params['stderr']
         if params['join_streams']:
             jt.joinFiles = True
         if params['job_name']:
