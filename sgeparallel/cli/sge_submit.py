@@ -3,14 +3,12 @@ from __future__ import absolute_import, print_function
 
 import argparse
 import os
-import shutil
 import tempfile
 import threading
 
 import drmaa
 import signal
 
-import sys
 
 from sgeparallel.runner import Runner
 from sgeparallel.template import command_substitute, params_substitute
